@@ -8,7 +8,7 @@ public class App {
     static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
     static final String DB_URL = "jdbc:mysql://123.60.60.74/linux_final";
     static final String USER = "root";
-    static final String PASS = "Architect123.";
+    static final String PASS = "Wzw@20010718";
 
     public static void main(String[] args) {
         Connection conn = null;
@@ -17,7 +17,7 @@ public class App {
             Class.forName(JDBC_DRIVER);
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
             stmt = conn.createStatement();
-            String sql = "[sql]";
+            String sql = "SELECT id,name FROM t_student WHERE id=4;";
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()) {
                 int id = rs.getInt("id");
